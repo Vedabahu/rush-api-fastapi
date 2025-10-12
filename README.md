@@ -7,7 +7,8 @@ This repo contains the code for the Maze for the even **Rush API** by the **club
 - Download the tool called [uv](https://docs.astral.sh/uv/getting-started/installation/)
 - Clone the repo: `git clone https://github.com/Vedabahu/rush-api-fastapi.git`
 - Change directory: `cd rush-api-fastapi`
-- Start the fast-api server: `uv run fastapi main.py`
+- Start the fast-api development server: `uv run fastapi dev main.py` 
+- Or start the fast-api production server: `uv run fastapi run main.py` 
 
 ## Some notes on contribution
 
