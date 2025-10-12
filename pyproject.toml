@@ -1,7 +1,7 @@
 [project]
 name = "rush-api-fastapi"
 version = "0.1.0"
-description = "Maze design for Rush API - Techniosis club event 2025"
+description = "Maze design for Rush API - Techniosys club event 2025"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = []
