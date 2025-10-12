@@ -17,4 +17,4 @@ async def start_of_the_maze():
 
 Fill the response with a docstring explaining what the function is doing with a proper information. The path of the endpoint will be specified. Do not assume it. Ask for it if I do not mention it. Always use `async` functions. This is for better performance. If there is an image, it will be in the folder `/images/<image.png_jpg_jpeg>`. If the response requires you to send an image, create another endpoint with the same preceeding one as before and add the image to its end by using its name. For example, if the current endpoint is `/` and the image has to be sent, write the json response to have an image field pointing to the image path like `{ "image" : "/image/carbon.png" }`. For this, create another function which return the image when called.
 
-I will now start giving the details. Give me the appropriate fastapi code which is async. 
+I will now start giving the details. Give me the appropriate fastapi code which is async. All the API endpoints should be in lowercase. If the the path has some name or some words in it, Just join it without any spaces, for example: "/Giga Chad" should become "/gigachad".
