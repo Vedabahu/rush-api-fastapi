@@ -83,19 +83,167 @@ async def get_big_strong_dude_image():
     """Serves the image for the question where the player must identify the person."""
     return FileResponse("./images/big_strong_dude.jpeg")
 
+# 34 to key node by shhadowpdf
+@app.get(
+    "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/{response}"
+)
+async def decipher(response: str):
+    if response == "dr-prakash-pawar":
+        return{
+        "question": """Can you decipher this? 
+        7 18 11 4  19 3  4 18 15  13 11 26 19 4 11 22  25 16  16 2 11 24 13 15 
+        Z = 10, O = 25""",
+        "hint": "The alphabet threw a party, and everyone came 10 spots late. Decode their hangover."
+        }
+    else:
+        return {
+            "message": "Oops! You've hit a dead end 🧱",
+            "information": "Seems like that wasn't the right path... Check your answer. It might be wrong!",
+            "hint": "Not all who wander are lost - but you might be 😉",
+        }
+@app.get(
+    "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/{response}"
+)
+async def love_city(response: str):
+    if response == "paris":
+        return {
+            "question": "If in a certain language 'NIL' is written as 'MOHJKM' then how will 'COMB' be written in that language?"
+        }
+    else:
+        return {
+            "message": "Oops! You've hit a dead end 🧱",
+            "information": "Seems like that wasn't the right path... Check your answer. It might be wrong!",
+            "hint": "Not all who wander are lost - but you might be 😉",
+        }
+
+@app.get(
+    "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/{response}"
+)
+async def comb(response: str):
+    if response == "bdnplanc":
+        return{
+#confused
+        }
+    else:
+        return {
+            "message": "Oops! You've hit a dead end 🧱",
+            "information": "Seems like that wasn't the right path... Check your answer. It might be wrong!",
+            "hint": "Not all who wander are lost - but you might be 😉",
+        }
+
+@app.get(
+    "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/bdnplanc/{res}"
+)
+async def unknown(res: str):
+    if res == "a":
+        return{
+            "question": "How many clocks are there at the entrance of PI block in the college?"
+        }
+    elif res == "b":
+        return{
+#confused
+        }
+    elif res == "c":
+        return{
+#confused
+        }
+@app.get(
+    "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/bdnplanc/a/{res}"
+)
+async def pi_block(res: int):
+    if res == 4:
+        return{
+            "question": "You walk into a room with only one match. Inside the room is an oil lamp, a candle, and a fireplace. Which do you light first?",
+            "hint": "So eager to light the world aflame… yet blind to what must perish first. Tell me, what must die before anything else can live?"
+        }
+    else:
+        return {
+            "message": "Oops! You've hit a dead end 🧱",
+            "information": "Seems like that wasn't the right path... Check your answer. It might be wrong!",
+            "hint": "Not all who wander are lost - but you might be 😉",
+        }
+
+@app.get(
+    "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/bdnplanc/a/4/{res}"
+)
+async def match(res: str):
+    if res == "match":
+        return{
+            "question": "Best club of IIIT Dharwad 😉😉",
+            "information": "If u get this wrong u should be out of this room..... 😐"
+        }
+    else:
+        return{
+            "message": "Oops! You've hit a dead end 🧱",
+            "information": "Seems like that wasn't the right path... Check your answer. It might be wrong!",
+            "hint": "Not all who wander are lost - but you might be 😉", 
+        }
 
 # Key Node
 @app.get(
-    "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/bdnplnac/a/4/match/techniosys"
+    "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/bdnplanc/a/4/match/{res}"
 )
-async def key_room():
+async def key_room(res: str):
     """This endpoint represents a secret room deep within the maze where the player discovers a suspicious key."""
-    return {
+    if res == "techniosys":
+        return {
         "information": "You've stumbled upon a dimly lit room... and there it lies - a key, cold and gleaming. Something about it feels... wrong.",
         "key": KEY,
         "hint": "Keep the key safe. You may not know when, but you *will* need it.",
         "next_step": "A faint whisper echoes: 'Return to /b/12 if you wish to move forward...'",
-    }
+        }
+    else:
+        return{
+            "message": "Waiting for someone with *actual taste*.",
+            "information": "Try again. 😎"
+        }
+
+    
+# 23 and 22 by shhadowpdf
+@app.get(
+    "/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/{res}"
+)
+async def ques(res: str):
+    if res == "b":
+        return{
+            "question": "What is the minimum number of different colours required to paint the given figure such that no two adjacent regions have the same colour in the image?",
+            "img": "/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/adjacent.png"
+        }
+    else:
+        return{
+            "message": "Oops! You've hit a dead end 🧱",
+            "information": "Seems like that wasn't the right path... Check your answer. It might be wrong!",
+            "hint": "Not all who wander are lost - but you might be 😉", 
+        }
+    
+@app.get(
+    "/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/adjacent.png"
+)
+async def adjacent_circle():
+    return FileResponse('./images/adjacent.png')
+
+@app.get(
+    "/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/{res}"
+)
+async def called(res: int):
+    if res == 3:
+        return{
+            "question": "If 'cages' are called 'rockets', 'rockets' are called 'traps', 'traps' are called 'planets', \n 'planets' are called 'aeroplanes', 'aeroplanes' are called 'cycles' and cycles' are called \n 'cars', what is Earth",
+            "options": [
+                "a: Cycles",
+                "b: Rockets",
+                "c: Planet",
+                "d: Aeroplanes",
+                "e: Cars" ]
+        }
+    else:
+        return{
+            "message": "Oops! You've hit a dead end 🧱",
+            "information": "Seems like that wasn't the right path... Check your answer. It might be wrong!",
+            "hint": "Not all who wander are lost - but you might be 😉",
+        }
+
+
 
 
 # Goal Node
