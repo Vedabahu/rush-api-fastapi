@@ -123,7 +123,7 @@ async def unlock_treasure(request: Request):
     if key == KEY:
         return {
             "message": "The key fits perfectly! 🔑 The chest creaks open... and inside you find something truly legendary.",
-            "treasure": "/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/a/oss/6/a/vedabahu/63/time/trasure.webm",
+            "treasure": "/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/a/oss/6/a/vedabahu/63/time/linus-vp-the-brave.webm",
             "information": "Behold! You’ve unlocked the ultimate treasure - get ready, this is going to be *epic*! 🎉",
         }
     else:
@@ -134,7 +134,7 @@ async def unlock_treasure(request: Request):
 
 
 @app.get(
-    "/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/a/oss/6/a/vedabahu/63/time/trasure.webm"
+    "/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/a/oss/6/a/vedabahu/63/time/linus-vp-the-brave.webm"
 )
 async def get_treasure_video():
     """Serves the rick roll video as the final treasure."""
