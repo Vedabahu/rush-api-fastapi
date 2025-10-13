@@ -117,21 +117,6 @@ async def love_city(response: str):
         }
 
 @app.get(
-    "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/{response}"
-)
-async def comb(response: str):
-    if response == "bdnplanc":
-        return{
-#confused
-        }
-    else:
-        return {
-            "message": "Oops! You've hit a dead end 🧱",
-            "information": "Seems like that wasn't the right path... Check your answer. It might be wrong!",
-            "hint": "Not all who wander are lost - but you might be 😉",
-        }
-
-@app.get(
     "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/bdnplanc/{res}"
 )
 async def unknown(res: str):
@@ -143,10 +128,7 @@ async def unknown(res: str):
         return{
 #confused
         }
-    elif res == "c":
-        return{
-#confused
-        }
+
 @app.get(
     "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/bdnplanc/a/{res}"
 )
@@ -230,11 +212,11 @@ async def called(res: int):
         return{
             "question": "If 'cages' are called 'rockets', 'rockets' are called 'traps', 'traps' are called 'planets', \n 'planets' are called 'aeroplanes', 'aeroplanes' are called 'cycles' and cycles' are called \n 'cars', what is Earth",
             "options": [
-                "a: Cycles",
-                "b: Rockets",
-                "c: Planet",
-                "d: Aeroplanes",
-                "e: Cars" ]
+                {"a": "Cycles"},
+                {"b": "Rockets"},
+                {"c":"Planet"},
+                {"d": "Aeroplanes"},
+                {"e": "Cars"} ]
         }
     else:
         return{
@@ -335,10 +317,11 @@ async def batman_node():
         ]
     }
 
-@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/bdnplnac")
-async def paris_bdnplnac():
+@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/{res}")
+async def paris_bdnplnac(res: str):
     """A silent crossroads deep within the maze where two mysterious choices await the player."""
-    return {
+    if res == "bdnplanc":
+        return {
         "question": "You find yourself in an underground gallery lit by ghostly lanterns. Two paintings hang before you — one depicts a roaring storm, the other a calm night sky. Which vision calls to you?",
         "information": "The air hums softly as the eyes in the paintings seem to follow your every move.",
         "options": [
@@ -346,6 +329,12 @@ async def paris_bdnplnac():
             {"b": "The night — serene, deep, and watchful."}
         ]
     }
+    else:
+        return {
+            "message": "Oops! You've hit a dead end 🧱",
+            "information": "Seems like that wasn't the right path... Check your answer. It might be wrong!",
+            "hint": "Not all who wander are lost - but you might be 😉",
+        }
 
 
 
