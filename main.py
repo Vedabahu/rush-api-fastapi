@@ -138,4 +138,4 @@ async def unlock_treasure(request: Request):
 )
 async def get_treasure_video():
     """Serves the rick roll video as the final treasure."""
-    return FileResponse("./images/treasure_2.webm")
+    return FileResponse("./images/trasure.webm")
