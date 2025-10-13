@@ -139,3 +139,131 @@ async def unlock_treasure(request: Request):
 async def get_treasure_video():
     """Serves the rick roll video as the final treasure."""
     return FileResponse("./images/trasure.webm")
+
+
+
+
+
+
+################################## BRANCH NODES FROM HERE ON  #######################################
+
+########## Left child's Branches ############
+
+@app.get("/b/12/ernest-khalimov/b")
+async def ernest_khalimov_b():
+    """An empty-seeming chamber with a tiny riddle — choose wisely by answering with 'a' or 'b'."""
+    return {
+        "question": "A dusty inscription above two sealed doors reads: 'One door hums with dawn, the other whispers at dusk. Speak only a single letter.'",
+        "information": "There is no obvious clue here — the choice is curious, not cruel. Reply with either 'a' or 'b' to pick a door.",
+        "options": [
+            {"a": "the door that hums with dawn"},
+            {"b": "the door that whispers at dusk"}
+        ]
+    }
+
+@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus")
+async def haven_venus():
+    """An empty chamber in the maze where the player faces a strange, adventurous riddle with three possible choices."""
+    return {
+        "question": "You stand at the edge of an ancient cavern. Three glowing runes hover before you — one shines like fire, another hums like wind, the last pulses like the deep sea. Which rune will you touch?",
+        "information": "The air crackles with energy. Each rune seems to lead to a different fate.",
+        "options": [
+            {"a": "The rune of flame — blazing with courage."},
+            {"b": "The rune of wind — whispering of secrets untold."},
+            {"c": "The rune of tides — calm yet endlessly deep."}
+        ]
+    }
+
+@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman")
+async def batman_node():
+    """A mysterious medieval chamber within the maze where the player must choose between three ancient paths."""
+    return {
+        "question": "In the torchlit hall of forgotten kings, three relics rest upon stone pedestals — a sword, a scroll, and a chalice. The inscription reads: 'Only one shall guide the worthy forward.' Which do you choose?",
+        "information": "Dust swirls in the air as echoes of old battles whisper through the corridor.",
+        "options": [
+            {"a": "The Sword — forged for those who fight destiny."},
+            {"b": "The Scroll — for those who seek truth in silence."},
+            {"c": "The Chalice — for those who trust the unknown."}
+        ]
+    }
+
+@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/bdnplnac")
+async def paris_bdnplnac():
+    """A silent crossroads deep within the maze where two mysterious choices await the player."""
+    return {
+        "question": "You find yourself in an underground gallery lit by ghostly lanterns. Two paintings hang before you — one depicts a roaring storm, the other a calm night sky. Which vision calls to you?",
+        "information": "The air hums softly as the eyes in the paintings seem to follow your every move.",
+        "options": [
+            {"a": "The storm — wild, fierce, and untamed."},
+            {"b": "The night — serene, deep, and watchful."}
+        ]
+    }
+
+
+
+########## Right child's Branches ############
+
+@app.get("/b/12/giga-chad/c/3")
+async def giga_chad_c3():
+    """A grand hall within the maze where three colossal doors test the adventurer’s instincts."""
+    return {
+        "question": "You step into a marble hall echoing with ancient chants. Before you stand three colossal doors — one carved from obsidian, one from ivory, and one from gold. Which do you dare to open?",
+        "information": "Each door radiates a different aura — strength, purity, and temptation — but only one leads onward.",
+        "options": [
+            {"a": "The obsidian door — dark and unyielding."},
+            {"b": "The ivory door — silent and pure."},
+            {"c": "The golden door — gleaming with promise."}
+        ]
+    }
+
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob")
+async def giga_chad_c3_a10_bob():
+    """A curious chamber in the maze where the player must make a choice among three cryptic paths."""
+    return {
+        "question": "You arrive in a hall filled with ticking clocks and shifting gears. Three doorways shimmer in time — one glows red, one blue, and one green. Which timeline will you step into?",
+        "information": "The air vibrates with the hum of forgotten machines, as if time itself is waiting for your decision.",
+        "options": [
+            {"a": "The red doorway — blazing with urgency."},
+            {"b": "The blue doorway — calm yet mysterious."},
+            {"c": "The green doorway — vibrant and alive."}
+        ]
+    }
+
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3")
+async def giga_chad_c3_a10_bob_c_nh5_3():
+    """A futuristic sci-fi themed chamber in the maze where the player must choose one of three advanced paths."""
+    return {
+        "question": "You step into a gleaming metallic corridor aboard an abandoned starship. Three holographic panels flicker to life — each showing a different destination across the galaxy. Where will you go, explorer?",
+        "information": "The hum of the ship’s reactor echoes faintly as starlight filters through cracked glass — destiny awaits your choice.",
+        "options": [
+            {"a": "The Nebula Gate — swirling with unknown energy."},
+            {"b": "The Cyber Spire — pulsing with digital life."},
+            {"c": "The Quantum Rift — bending light and logic alike."}
+        ]
+    }
+
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes")
+async def giga_chad_c3_a10_bob_c_nh5_3_b3_aeroplanes():
+    """A lively and whimsical chamber in the maze where the player must make a lighthearted choice among three fun options."""
+    return {
+        "question": "You burst into a colorful hangar where flying contraptions zoom overhead — paper planes, jetpacks, and even a flying bathtub! Which ride are you taking for your next wild adventure?",
+        "information": "Engines roar, laughter echoes, and a rubber duck waves from one of the cockpits — time to pick your ride!",
+        "options": [
+            {"a": "The paper plane — simple, swift, and full of spirit."},
+            {"b": "The jetpack — loud, flashy, and fast as lightning."},
+            {"c": "The flying bathtub — chaotic, bubbly, and hilariously unpredictable."}
+        ]
+    }
+
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/a/oss/6")
+async def oss_6_spooky_node():
+    """A dark and eerie chamber in the maze where the player faces a spooky choice among three unsettling paths."""
+    return {
+        "question": "You enter a shadowy room where whispers crawl along the walls. Three doors appear — one draped in cobwebs, one oozing a faint green mist, and one with faintly glowing runes. Which path do you dare to take?",
+        "information": "The air chills your spine and the floor creaks under unseen weight — your courage will be tested.",
+        "options": [
+            {"a": "The cobwebbed door — ancient and forgotten."},
+            {"b": "The misty door — swirling with eerie green fog."},
+            {"c": "The rune-etched door — glowing with ghostly symbols."}
+        ]
+    }
