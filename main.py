@@ -85,36 +85,24 @@ async def get_big_strong_dude_image():
 
 # 34 to key node by shhadowpdf
 @app.get(
-    "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/{response}"
+    "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar"
 )
-async def decipher(response: str):
-    if response == "dr-prakash-pawar":
-        return{
+async def decipher():
+    return{
         "question": """Can you decipher this? 
         7 18 11 4  19 3  4 18 15  13 11 26 19 4 11 22  25 16  16 2 11 24 13 15 
         Z = 10, O = 25""",
         "hint": "The alphabet threw a party, and everyone came 10 spots late. Decode their hangover."
         }
-    else:
-        return {
-            "message": "Oops! You've hit a dead end 🧱",
-            "information": "Seems like that wasn't the right path... Check your answer. It might be wrong!",
-            "hint": "Not all who wander are lost - but you might be 😉",
-        }
 @app.get(
-    "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/{response}"
+    "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris"
 )
-async def love_city(response: str):
-    if response == "paris":
-        return {
+async def love_city():
+    
+    return {
             "question": "If in a certain language 'NIL' is written as 'MOHJKM' then how will 'COMB' be written in that language?"
         }
-    else:
-        return {
-            "message": "Oops! You've hit a dead end 🧱",
-            "information": "Seems like that wasn't the right path... Check your answer. It might be wrong!",
-            "hint": "Not all who wander are lost - but you might be 😉",
-        }
+
 
 @app.get(
     "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/bdnplanc/{res}"
@@ -140,25 +128,18 @@ async def pi_block(res: int):
         }
     else:
         return {
-            "message": "Oops! You've hit a dead end 🧱",
-            "information": "Seems like that wasn't the right path... Check your answer. It might be wrong!",
-            "hint": "Not all who wander are lost - but you might be 😉",
+            "message": "Oops! That's incorrect",
+            "information": "Check your answer. It might be wrong!",
         }
 
 @app.get(
-    "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/bdnplanc/a/4/{res}"
+    "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/bdnplanc/a/4/match"
 )
-async def match(res: str):
-    if res == "match":
-        return{
+async def match():
+
+    return{
             "question": "Best club of IIIT Dharwad 😉😉",
             "information": "If u get this wrong u should be out of this room..... 😐"
-        }
-    else:
-        return{
-            "message": "Oops! You've hit a dead end 🧱",
-            "information": "Seems like that wasn't the right path... Check your answer. It might be wrong!",
-            "hint": "Not all who wander are lost - but you might be 😉", 
         }
 
 # Key Node
@@ -205,11 +186,11 @@ async def adjacent_circle():
     return FileResponse('./images/adjacent.png')
 
 @app.get(
-    "/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/{res}"
+    "/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3"
 )
-async def called(res: int):
-    if res == 3:
-        return{
+async def called():
+    
+    return{
             "question": "If 'cages' are called 'rockets', 'rockets' are called 'traps', 'traps' are called 'planets', \n 'planets' are called 'aeroplanes', 'aeroplanes' are called 'cycles' and cycles' are called \n 'cars', what is Earth",
             "options": [
                 {"a": "Cycles"},
@@ -217,12 +198,6 @@ async def called(res: int):
                 {"c":"Planet"},
                 {"d": "Aeroplanes"},
                 {"e": "Cars"} ]
-        }
-    else:
-        return{
-            "message": "Oops! You've hit a dead end 🧱",
-            "information": "Seems like that wasn't the right path... Check your answer. It might be wrong!",
-            "hint": "Not all who wander are lost - but you might be 😉",
         }
 
 
@@ -317,11 +292,10 @@ async def batman_node():
         ]
     }
 
-@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/{res}")
-async def paris_bdnplnac(res: str):
+@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/bdnplanc")
+async def paris_bdnplnac():
     """A silent crossroads deep within the maze where two mysterious choices await the player."""
-    if res == "bdnplanc":
-        return {
+    return {
         "question": "You find yourself in an underground gallery lit by ghostly lanterns. Two paintings hang before you — one depicts a roaring storm, the other a calm night sky. Which vision calls to you?",
         "information": "The air hums softly as the eyes in the paintings seem to follow your every move.",
         "options": [
@@ -329,12 +303,7 @@ async def paris_bdnplnac(res: str):
             {"b": "The night — serene, deep, and watchful."}
         ]
     }
-    else:
-        return {
-            "message": "Oops! You've hit a dead end 🧱",
-            "information": "Seems like that wasn't the right path... Check your answer. It might be wrong!",
-            "hint": "Not all who wander are lost - but you might be 😉",
-        }
+
 
 
 
