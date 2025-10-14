@@ -106,6 +106,17 @@ async def love_city():
     }
 
 
+@app.get(
+    "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/bdnplnac/"
+)
+async def branch_node_on_the_left_side():
+    return {
+        "information": "You've stumbled upon three skulls, each grinning wickedly in the flickering torchlight... Only one hides the path forward — the others whisper doom.",
+        "hint": "Choose wisely, traveler. The wrong touch might awaken what sleeps beneath.",
+        "options": {"a": "Lion Skull 🦁", "b": "Wolf Skull 🐺", "c": "Human Skull 💀"},
+    }
+
+
 # BRANCHNODE KINDLY CHECK THIS PART
 @app.get(
     "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/bdnplnac/{res}"
