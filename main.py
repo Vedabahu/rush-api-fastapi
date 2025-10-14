@@ -231,3 +231,68 @@ async def unlock_treasure(request: Request):
 async def get_treasure_video():
     """Serves the rick roll video as the final treasure."""
     return FileResponse("./images/trasure.webm")
+
+
+################## Branch Questions ######################
+
+############ LEFT ################
+
+@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/a")
+async def venus_a_puzzle():
+    """A mysterious riddle room where players must decipher the scrambled message."""
+    return {
+        "question": "Yffit etunim oga fi ti saw ufor semit sa anym setunim taps reeth kcolc'o, woh anym setunim si ti litnu xis kcolc'o?",
+        "information": "The symbols twist and dance before your eyes... only a clever mind can unscrable it's meaning."
+    }
+
+@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/a/26")
+async def venus_a26_temperature_riddle():
+    """A brain-teaser chamber: players must find the temperature that reads the same in °C and °F."""
+    return {
+        "question": "It is a matter of common knowledge that 0°C is the same as 32°F. It is also a known fact that 100°C equals 212°F. But there is a temperature that gives the same reading on both Centigrade and Fahrenheit scales. Can you find this temperature?",
+        "information": "This riddle asks you to find the single temperature value where the Celsius and Fahrenheit readings are identical.",
+        "hint": "Use the conversion formula F = (9/5) * C + 32. Set F = C and solve the resulting linear equation for the temperature (you'll get a negative value)."
+    }
+
+@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/a/26/-40")
+async def venus_a26_minus40_riddle():
+    """A puzzling room where logic meets arithmetic — solve the riddle of ages to proceed."""
+    return {
+        "question": "A father, I know, is 4 times his son's age. And in 30 years the son will be half as old as his father. What is the combined age of father and son?",
+        "information": "This riddle challenges you to form equations and reason your way through their ages.",
+    }
+
+@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/a/26/-40/75")
+async def venus_a26_minus40_75_riddle():
+    """A tricky puzzle chamber that tests your sense of logic and sequence — not just math!"""
+    return {
+        "question": "A heavy tree trunk can be sawed into a piece 12 ft long in one minute. How many minutes will it take to saw it into twelve equal pieces?",
+        "information": "It's not just about how many pieces you have, but how many cuts you make.",
+        "hint": "Think about how many cuts are needed to get 12 pieces — it's fewer than you think!"
+    }
+
+@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/a/26/-40/75/11")
+async def venus_a26_minus40_75_11_dead_end():
+    """A dead-end chamber where the traveler realizes this path leads nowhere... for now."""
+    return {
+        "information": "You’ve wandered into a hollow corridor that echoes with silence — no riddles, no answers, just the hum of mystery. Perhaps it’s time to retrace your steps… maybe the last fork held a better fate?",
+        "hint": "Go back to the last branching path — you might find the true way there."
+    }
+
+@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/a/17")
+async def pokemon_batman_a17():
+    """A playful challenge room — identify the Pokémon shown in the image to proceed."""
+    return {
+        "question": "Guess the Pokémon shown in the image.",
+        "image": "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/a/17/pokemon.png",
+        "information": "A shimmering silhouette stares back at you — trust your instincts and name the creature.",
+        "hint": "It's a Psychic type — think mind-benders and telekinetic trickery."
+    }
+
+@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/a/17/pokemon.png")
+async def get_pokemon_image_a17():
+    """Serves the Pokémon image for the guess-the-Pokémon challenge."""
+    from fastapi.responses import FileResponse
+    return FileResponse("./images/pokemon.png")
+
+
