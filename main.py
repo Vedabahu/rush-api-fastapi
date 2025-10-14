@@ -373,3 +373,131 @@ async def oss_6_spooky_node():
             {"c": "The rune-etched door — glowing with ghostly symbols."}
         ]
     }
+
+
+
+
+# abhijeet nagar work from node 13 to 5 including 36
+
+# ---------------- NODE 13 ----------------
+@app.get("/b/13/ernest-khalimov")
+async def node_13():
+
+    return {
+        "image": "/b/13/ernest-khalimov/13.png",
+        "information": "Open the link to see question",
+        "answer": "b",
+    }
+
+
+@app.get("/b/13/ernest-khalimov/13.png")
+async def get_big_strong_dude_image():
+
+    return FileResponse("./images/13.png")
+
+
+# ---------------- Before NODE 2 options ----------------
+@app.get("/b/13/ernest-khalimov/b")
+async def node_option2():
+
+    return {
+        "question": "Choose a door a or b ?",
+        "information": "square node",
+        "answer": "b",
+    }
+
+# ---------------- NODE 2 parallel dead end ----------------
+@app.get("/b/13/ernest-khalimov/b/a")
+async def node_2parallel():
+
+    return {
+        "question": "this is a dead end go back",
+        "information": "It is a dead end",
+        "answer": "None",
+    }
+# ---------------- NODE 2 ----------------
+@app.get("/b/13/ernest-khalimov/b/b")
+async def node_2():
+
+    return {
+        "question": "Number of cultural clubs ?",
+        "information": "In IIITDwd",
+        "answer": "7",
+    }
+
+# ---------------- NODE 12 ----------------
+@app.get("/b/13/ernest-khalimov/b/b/7")
+async def node_12():
+
+    return {
+        "question": "What is today’s wordle answer ?",
+        "information": "Simple question",
+        "answer": "haven",
+    }
+
+# ---------------- NODE 35 ----------------
+@app.get("/b/13/ernest-khalimov/b/b/7/haven")
+async def node_35():
+
+    return {
+        "question": "Solve the morse code \n .-- .... .. -.-. .... / .. ... / - .... . / --- -. .-.. -.-- / .--. .-.. .- -. . - / .. -. / --- ..- .-. / ... --- .-.. .- .-. / ...\n-.-- ... - . -- / - .... .- - / .-. --- - .- - . ... / -.-. .-.. --- -.-. -.- .-- .. ... . ..--..",
+        "information": "A single symbol holds the key.",
+        "answer": "venus",
+    }
+
+# ----------------Before NODE 5 options----------------
+@app.get("/b/13/ernest-khalimov/b/b/7/haven/venus")
+async def node_option5():
+
+    return {
+        "question": "Choose a door a, b or c",
+        "information": "any one path",
+        "answer": "c",
+    }
+
+# ----------------NODE 5 parallel dead end 1----------------
+@app.get("/b/13/ernest-khalimov/b/b/7/haven/venus/a")
+async def node_5parallel1():
+
+    return {
+        "question": "This is a dead end go back",
+        "information": "dead end 1",
+        "answer": "None",
+    }
+
+# ---------------- NODE 5 parallel dead end 2----------------
+@app.get("/b/13/ernest-khalimov/b/b/7/haven/venus/b")
+async def node_5parallel2():
+
+    return {
+        "question": "This is a dead end go back",
+        "information": "dead end 2",
+        "answer": "None",
+    }
+
+# ---------------- NODE 5 ----------------
+@app.get("/b/13/ernest-khalimov/b/b/7/haven/venus/c")
+async def node_5():
+
+    return {
+        "question": "A + B means B is the brother of A.\n A x B means B is the husband of A. \nA - B means A is the mother of B. \nA % B means A is the father of B. \nHow is Q related to T from the expression 'Q-P+R%T'?",
+        "information": "Logical Question",
+        "answer": "a",
+    }
+
+
+# ---------------- NODE 36 ----------------
+@app.get("/b/12/giga-chad/c/3/a/b/bob/c")
+async def node_36():
+
+    return {
+        "image": "/b/12/giga-chad/c/3/a/b/bob/c/36.png",
+        "information": "A single symbol holds the key.",
+        "answer": "nh5+",
+    }
+
+@app.get("/b/12/giga-chad/c/3/a/b/bob/c/36.png")
+async def get_big_strong_dude_image():
+
+    return FileResponse("./images/36.png")
+# abhijeet nagar work from node 13 to 5 including 36
