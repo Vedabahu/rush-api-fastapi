@@ -248,7 +248,7 @@ async def node_30():
 @app.get("/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/a/oss/30.png")
 async def get_node_30_image():
     """Serves the image for the question."""
-    return FileResponse("./30.png")
+    return FileResponse("./images/30.png")
 
 
 # ---------------- NODE 27 ----------------
@@ -263,7 +263,7 @@ async def node_27():
 @app.get("/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/a/27.png")
 async def get_node_27_image():
     """Serves the image for the question."""
-    return FileResponse("./27.png")
+    return FileResponse("./images/27.png")
 
 
 # ---------------- Before NODE 31 options ----------------
@@ -309,7 +309,7 @@ async def node_10():
 )
 async def get_node_10_image():
     """Serves the image for the question."""
-    return FileResponse("./10.png")
+    return FileResponse("./images/10.png")
 
 
 # ---------------- NODE 4 ----------------
