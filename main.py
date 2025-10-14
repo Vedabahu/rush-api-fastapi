@@ -231,3 +231,91 @@ async def unlock_treasure(request: Request):
 async def get_treasure_video():
     """Serves the rick roll video as the final treasure."""
     return FileResponse("./images/trasure.webm")
+
+
+# Ishaan shetty node from 27 to 4
+
+
+# ---------------- NODE 30 ----------------
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/a/oss")
+async def node_30():
+    return {
+        "image": "/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/a/oss/30.png",
+        "information": "Look at the colors and the shape properly and get the pattern!..",
+    }
+
+
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/a/oss/30.png")
+async def get_node_30_image():
+    """Serves the image for the question."""
+    return FileResponse("./images/30.png")
+
+
+# ---------------- NODE 27 ----------------
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/a")
+async def node_27():
+    return {
+        "image": "/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/a/27.png",
+        "information": "Tricky but can be done.",
+    }
+
+
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/a/27.png")
+async def get_node_27_image():
+    """Serves the image for the question."""
+    return FileResponse("./images/27.png")
+
+
+# ---------------- Before NODE 31 options ----------------
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/a/oss/6")
+async def node_option31():
+    return {
+        "question": "Choose a door a or b or c?",
+        "information": "A single door can lead to many ways but there are only two ways here.",
+    }
+
+
+# ---------------- NODE 31 parallel dead end ----------------
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/a/oss/6/b")
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/a/oss/6/c")
+async def node_31parallel():
+    return {
+        "question": "This is a dead end. Go back.",
+        "information": "Ahh shit, here we go again.",
+    }
+
+
+# ---------------- NODE 31 ----------------
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/a/oss/6/a")
+async def node_31():
+    return {
+        "question": "The below thing contains the encoded cipher text which was generated using Vigenere's Cipher. Find the key which was used to encode the plain text.",
+        "cipher_test": "ksvtnau cn e fonpyyciqsjvl ukm gewesikqhnu aux oivtjnn jgewfprt xzwlgoek nj wlmqlpzt xke fnacmi dpj lpzzgbcme, mljq getinhdrj aod iodpgiog hjdw wo uezndrj, dfbbabmqg, bnk xjgxmfnacik whfm. pn jjiess hh drwujtppz yves iunzviade abvx dlmodm pwhrt tv yvwllz slhy lwtq rlkpivtt wpnc zdrjobm hiwhpdz fdoh gft, winx, suu, phnxl, dne dlfzxh, aod zoktrrus kcqiusf dhnv jrrnaam nyfh bs qmjr, amm, fvlh-hdtb, aux wmqasy. winxpao fhwdpltbtlm xsolbbvlvxloo toljyjh thhlzh fomllwomrnt aux rsuktphwzw, hnbbscik webmz nj sugbnptz esi sexozwws, nauubi hnwiyiiqhnus hhy zdrjaifzw ios dpzaiueot znvkhs miry yiyemowgzrw os pyiyyftjou, uih duuotuoi wettphb arrlfsirw yib jhpvwfrjpa nzww sdrpjow. ltt abnjqdtjou wvtdbjlpndiv iocsoyi uuonphb grlmejndsqs pf aynxv io slkpiqcf, sjbzhxljnn nzwws goy wjrwiouvon mqtfgyuomrn bnk xzplvfrf (wd/gg) wjto njsos miry iizmbn, hhy qrnjtvldrj aqi oyvpwh bnk jzviosmhhxi ziuh iodpw-io auugcwids. hoolhnuijuomrn neabjhv svco un fdsjc hool, ravto 2.0, ukm nezs, hhy fhasey njohnt ayy nyspprayy, qdkjnn co wxiuaifz jrr uezndrj sfcblz esit. pvmoqdn't fluoyuet eenzrg tp glhzvdtjnn ukm godutyixdtjou xdvhculf zmsp rfqbynxv, mpcrcik dpjs mim hhvflvjhiqt cemimi eadklhy grmqllndsq, aod ccnydljzphb vhsqoumzw flfayft alti sauoyv cpdlm, ciddfrz, uih eoey wlzzlexs. pnn zhrtaacgi beu uzym-juifnkft iqvjrvhhiqt naryn mw a qowogeu ciopwz epoog kyqiooqeym vrg qb tluhw ios emzdgleotss qeoieaacik dpj fbhxxlooascoc, faucocik lstulm zeulz iu xzzhlpptyix, dne mhcixdioiua cmjh tomnreue ruhfdxb tirvoblruu toy vtl's mimyxcflf. tocn vrbvsa jgewfprt cn efcfszcwph vja kynowoq awj, wvrwtey, im qrbjll, mptsostphb joeyiifz arrlfsirw dne iunzkuauiua nidmmezmgc lnuo tiyiun eecygssmfna jdthljnlm asu egflwomye bpp gvrdgfmlho eqd uezndrj avtvgvxloo.",
+        "information": "Decode carefully, the truth is hidden in plain sight.",
+    }
+
+
+# ---------------- NODE 10 ----------------
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/a/oss/6/a/vedabahu")
+async def node_10():
+    return {
+        "image": "/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/a/oss/6/a/vedabahu/10.png",
+        "information": "Khali pet meri dimaag ki batti nahi jalti.",
+    }
+
+
+@app.get(
+    "/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/a/oss/6/a/vedabahu/10.png"
+)
+async def get_node_10_image():
+    """Serves the image for the question."""
+    return FileResponse("./images/10.png")
+
+
+# ---------------- NODE 4 ----------------
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/a/oss/6/a/vedabahu/")
+async def node_35():
+    return {
+        "question": "Solve the morse code .. / -.-. .- -. / -... ..- .. .-.. -.. / -.-- --- ..- / ..- .--. / --- .-. / -... .-. . .- -.- / -.-- --- ..- / -.. --- .-- -., --..-- / -.-- . - / -.-- --- ..- / -.-. .- -. - / - --- ..- -.-. .... / -- . .-.-.- / .--. . --- .--. .-.. . / -.-. .... .- ... . / -- . / . ...- . .-. -.-- / -.. .- -.-- --..-- / -... ..- - / --- -. -.-. . / .. -- / --. --- -. . --..-- / .. / -. . ...- . .-. / .-. . - ..- .-. -.\ .-.-.- / .-- .... .- - / .- -- / .. ..--..",
+        "information": "Morse code is here — decode to get the answer.",
+    }
