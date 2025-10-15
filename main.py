@@ -167,9 +167,9 @@ async def question_cultural_clubs():
 
 @app.get("/b/12/ernest-khalimov/b/b/7")
 async def question_wordle():
-    """This maze question challenges the player to provide today’s Wordle answer."""
+    """This maze question challenges the player to provide today's Wordle answer."""
     return {
-        "question": "What is today’s Wordle answer?",
+        "question": "What is today's Wordle answer?",
         "information": "Sharpen your mind and think quickly — the answer changes daily!",
         "hint": "Check the Wordle puzzle for today; only the correct word will let you proceed.",
         "website": "https://www.nytimes.com/games/wordle/index.html",
@@ -524,7 +524,7 @@ async def venus_a26_minus40_75_riddle():
 async def venus_a26_minus40_75_11_dead_end():
     """A dead-end chamber where the traveler realizes this path leads nowhere... for now."""
     return {
-        "information": "You've wandered into a hollow corridor that echoes with silence — no riddles, no answers, just the hum of mystery. Perhaps it’s time to retrace your steps… maybe the last fork held a better fate?",
+        "information": "You've wandered into a hollow corridor that echoes with silence — no riddles, no answers, just the hum of mystery. Perhaps it's time to retrace your steps… maybe the last fork held a better fate?",
         "hint": "Go back to the last branching path — you might find the true way there.",
     }
 
@@ -784,7 +784,7 @@ async def image_giga_chad_7():
 
 @app.get("/b/12/giga-chad/c/3")
 async def giga_chad_c3():
-    """A grand hall within the maze where three colossal doors test the adventurer’s instincts."""
+    """A grand hall within the maze where three colossal doors test the adventurer's instincts."""
     return {
         "question": "You step into a marble hall echoing with ancient chants. Before you stand three colossal doors — one carved from obsidian, one from ivory, and one from gold. Which do you dare to open?",
         "information": "Each door radiates a different aura — strength, purity, and temptation — but only one leads onward.",
@@ -833,7 +833,7 @@ async def giga_chad_c_3_a_10_b():
     """A twisting chamber where logic and observation determine the next path."""
     return {
         "information": "You enter a circular hall. Names echo faintly in your mind, hinting at a hidden pattern...",
-        "question": "Alan, Bob, Colin, Dave and Emily are standing in a circle. Alan is on Bob’s immediate left. Bob is on Colin’s immediate left. Colin is on Dave’s immediate left. Dave is on Emily’s immediate left. Who is on Alan’s immediate right?",
+        "question": "Alan, Bob, Colin, Dave and Emily are standing in a circle. Alan is on Bob's immediate left. Bob is on Colin's immediate left. Colin is on Dave's immediate left. Dave is on Emily's immediate left. Who is on Alan's immediate right?",
         "hint": "Trace each position carefully; one wrong step, and you may be lost in the maze.",
     }
 
@@ -891,7 +891,7 @@ async def giga_chad_c3_a10_bob_c_nh5_3():
     """A futuristic sci-fi themed chamber in the maze where the player must choose one of three advanced paths."""
     return {
         "question": "You step into a gleaming metallic corridor aboard an abandoned starship. Three holographic panels flicker to life — each showing a different destination across the galaxy. Where will you go, explorer?",
-        "information": "The hum of the ship’s reactor echoes faintly as starlight filters through cracked glass — destiny awaits your choice.",
+        "information": "The hum of the ship's reactor echoes faintly as starlight filters through cracked glass — destiny awaits your choice.",
         "options": [
             {"a": "The Nebula Gate — swirling with unknown energy."},
             {"b": "The Cyber Spire — pulsing with digital life."},
@@ -1067,3 +1067,374 @@ async def unlock_treasure(request: Request):
 async def get_treasure_video():
     """Serves the rick roll video as the final treasure."""
     return FileResponse("./images/trasure.webm")
+
+
+###### Right Side branch nodes
+
+######### b/12/giga-chad/c/3 gate:
+
+
+# b/12/giga-chad/c/3/b path:
+@app.get("/b/12/giga-chad/c/3/b")
+async def giga_chad_c_3_b():
+    """A visual puzzle where the traveler must identify the missing number on a credit card."""
+    return {
+        "question": "Which number is missing on the bottom credit card?",
+        "image": "/images/credictcard.png",
+        "information": "Look closely at the image — a single digit is missing on the bottom card. Can you spot it?",
+    }
+
+
+@app.get("/images/credictcard.png")
+async def get_credictcard_image():
+    """Serves the credit card puzzle image."""
+    return FileResponse("./images/credictcard.png")
+
+
+@app.get("/b/12/giga-chad/c/3/b/8")
+async def giga_chad_c_3_b_8():
+    """A question about modern neural network architectures and their mechanisms."""
+    return {
+        "question": "Which neural network architecture replaces recurrence with self-attention to handle sequential data efficiently?",
+        "information": (
+            "Introduced in the landmark 2017 paper 'Attention is All You Need', "
+            "this architecture revolutionized NLP by enabling parallel processing "
+            "of sequences instead of relying on recurrent steps. "
+            "It powers large language models like GPT and BERT."
+        ),
+    }
+
+
+@app.get("/b/12/giga-chad/c/3/b/8/transformer")
+async def giga_chad_c_3_b_8_transformer():
+    """A mysterious dead end for the wanderer."""
+    return {
+        "message": "There is no question here. This is a dead end.",
+        "information": (
+            "The wanderer stands at the edge of knowledge — this path leads nowhere. "
+            "Perhaps another route holds the key they seek. Turn back, and follow the current where it diverges."
+        ),
+    }
+
+
+# b/12/giga-chad/c/3/c path:
+
+
+@app.get("/b/12/giga-chad/c/3/c")
+async def giga_chad_c_3_c():
+    """A cinematic puzzle for the curious wanderer."""
+    return {
+        "question": "Guess the movie from the image.",
+        "image": "/images/realmovie.png",
+        "information": "As you wish — every frame hides a story, and every story hides a clue.",
+    }
+
+
+@app.get("/images/realmovie.png")
+async def get_realmovie_image():
+    """Serves the movie guessing image."""
+    return FileResponse("./images/realmovie.png")
+
+
+@app.get("/b/12/giga-chad/c/3/c/dune")
+async def q67():
+    """A debugging challenge hidden in code."""
+    return {
+        "question": "This code tries to create a dictionary from two lists but fails. Find the line with the error.",
+        "image": "/images/real_code.png",
+        "information": "Look closely — sometimes the smallest mismatch between lists can cause the biggest errors.",
+    }
+
+
+@app.get("/images/real_code.png")
+async def get_real_code_image():
+    """Serves the debugging challenge image."""
+    return FileResponse("./images/real_code.png")
+
+
+@app.get("/b/12/giga-chad/c/3/c/dune/5")
+async def giga_chad_c_3_c_dune_5():
+    """A dead-end — the dunes whisper secrets of another path."""
+    return {
+        "message": "The sands shift beneath your feet, wanderer. This path leads nowhere.",
+        "information": "Perhaps a different trail holds the treasure you seek. The echoes hint of routes unseen — retrace, rethink, rediscover.",
+    }
+
+
+# /b/12/giga-chad/c/3/a/10/b/bob/a path
+
+
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/a")
+async def giga_chad_c_3_a_10_b_bob_a():
+    """A nostalgic tech trivia buried in time."""
+    return {
+        "question": "Which company's failed portable music player called “Zune” was meant to compete with the iPod?",
+        "information": "Once upon a time, even giants stumble when they dance in Apple's shadow.",
+    }
+
+
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/a/microsoft")
+async def giga_chad_c_3_a_10_b_bob_a_microsoft():
+    """A debugging challenge awaits the wanderer."""
+    return {
+        "question": "Which line has error?",
+        "image": "/images/real_code2.png",
+        "information": "The error hides in plain sight — a small slip in logic or syntax.",
+    }
+
+
+@app.get("/images/real_code2.png")
+async def get_real_code2_image():
+    """Serves the debugging challenge image."""
+    return FileResponse("./images/real_code2.png")
+
+
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/a/microsoft/14")
+async def giga_chad_c_3_a_10_b_bob_a_microsoft_14():
+    """A question from the dawn of the Internet."""
+    return {
+        "question": "What was the first ever message sent over the Internet (ARPANET) in 1969 — only two letters long before the system crashed?",
+        "information": "Back when the Internet was still a fragile experiment — two letters made history.",
+    }
+
+
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/a/microsoft/14/lo")
+async def giga_chad_c_3_a_10_b_bob_a_microsoft_14_lo():
+    """A mysterious and playful dead end for the wanderer."""
+    return {
+        "question": "…silence echoes here. No question awaits, only whispers of another path.",
+        "information": "The shadows hint at secrets elsewhere. Retrace your steps and follow a different trail — the true adventure awaits beyond this point.",
+    }
+
+
+# /b/12/giga-chad/c/3/a/10/b/bob/b path
+
+
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/b")
+async def giga_chad_c_3_a_10_b_bob_b():
+    """A cryptography challenge where the traveler must identify the encryption type."""
+    return {
+        "question": "In cryptography, which algorithm type uses the same key for both encryption and decryption?",
+        "information": "Some secrets are locked with a single key — can you name the class of algorithms that works this way?",
+    }
+
+
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/b/symmetric")
+async def giga_chad_c_3_a_10_b_bob_b_symmetric():
+    """A tech trivia room about the origins of computer bugs."""
+    return {
+        "question": "The term “bug” in computer science originated when a real insect caused a system malfunction. What insect was it?",
+        "information": "Sometimes the smallest creature can cause the biggest problem — look closely at history!",
+    }
+
+
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/b/symmetric/moth")
+async def giga_chad_c_3_a_10_b_bob_b_symmetric_moth():
+    """A debugging challenge where the traveler must identify the error in the code."""
+    return {
+        "question": "Which line has error?",
+        "image": "/images/real_code3.png",
+        "information": "The bug lurks in the lines — observe carefully and spot the culprit.",
+    }
+
+
+@app.get("/images/real_code3.png")
+async def get_real_code3_image():
+    """Serves the debugging challenge image."""
+    return FileResponse("./images/real_code3.png")
+
+
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/b/symmetric/moth/11")
+async def giga_chad_c_3_a_10_b_bob_b_symmetric_moth_11():
+    """A mysterious dead-end in the maze for the wanderer."""
+    return {
+        "question": "…all is quiet here, no puzzle awaits. The code has reached its shadowy corner.",
+        "information": "The path forward hides elsewhere. Retrace your steps and explore another trail — the real challenge lies beyond this turn.",
+    }
+
+
+# /b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/a path
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/a")
+async def giga_chad_c_3_a_10_b_bob_c_nh5_3_a():
+    """A computer storage challenge where the traveler must identify the type of memory."""
+    return {
+        "question": "In computer storage, what is the term for memory that is non-volatile but allows fast random access, like SSDs?",
+        "information": "Think about modern storage devices that keep data even when powered off but can be accessed quickly.",
+    }
+
+
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/a/flash")
+async def giga_chad_c_3_a_10_b_bob_c_nh5_3_a_flash():
+    """A seating puzzle where the traveler must deduce positions in a circle."""
+    return {
+        "question": "Five persons were playing a card game while sitting in a circle, all facing the center. Rithwik was to the left of Vedabahu. Rishik was to the right of Modak and was sitting between Modak and Janaki Ram. Who was to the right of Janaki Ram?",
+        "information": "Visualize the circle carefully — sometimes the answer is just a matter of orientation and logic!",
+    }
+
+
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/a/flash/rithwik")
+async def giga_chad_c_3_a_10_b_bob_c_nh5_3_a_flash_rithwik():
+    """A mysterious dead-end in the maze for the traveler."""
+    return {
+        "question": "The path ahead fades into shadows… nothing more to solve here.",
+        "information": "You're so close! But the true challenge lies along another trail — perhaps retracing your steps will reveal it.",
+    }
+
+
+# /b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/c path
+
+
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/c")
+async def giga_chad_c_3_a_10_b_bob_c_nh5_3_c():
+    """A programming paradigm challenge where the traveler must identify the paradigm."""
+    return {
+        "question": "What is the term for a programming paradigm that treats computation as the evaluation of mathematical functions, avoiding changing state and mutable data?",
+        "information": "Think about paradigms that emphasize immutability, pure functions, and avoid side effects.",
+    }
+
+
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/c/functional")
+async def giga_chad_c_3_a_10_b_bob_c_nh5_3_c_functional():
+    """A directional puzzle where the traveler must deduce the facing direction using shadows."""
+    return {
+        "question": "One evening before sunset, two friends — Aneesh and Modak — were talking to each other face to face. If Modak's shadow was exactly to his right side, which direction was aneesh facing?",
+        "information": "Visualize the sun's position during sunset — shadows stretch opposite the light.",
+    }
+
+
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/c/functional/south")
+async def giga_chad_c_3_a_10_b_bob_c_nh5_3_c_functional_south():
+    """A mysterious dead-end in the maze for the traveler."""
+    return {
+        "question": "The path seems to vanish here… no puzzle awaits.",
+        "information": "You're treading carefully and wisely, but the true challenge lies elsewhere. Perhaps retracing your steps or exploring a different route will reveal it.",
+    }
+
+
+# /b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/b
+
+
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/b")
+async def giga_chad_c_3_a_10_b_bob_c_nh5_3_b_3_aeroplanes_b():
+    """A riddle room where the traveler must solve a poetic puzzle."""
+    return {
+        "question": "I'm named for haste but flourish in reeds, I swell in crowds and throb in veins, I crown the hours commuters dread, And on the field I burst through lanes. Four letters wear my many masks — what am I?",
+        "information": "Pay attention to wordplay and the many contexts in which this thing appears — it's everywhere in daily life.",
+    }
+
+
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/b/rush")
+async def giga_chad_c_3_a_10_b_bob_c_nh5_3_b_3_aeroplanes_b_rush():
+    """A mysterious riddle room where the traveler must deduce an invisible phenomenon."""
+    return {
+        "question": "I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I?",
+        "information": "Think about natural phenomena that carry sound without being seen.",
+    }
+
+
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/b/rush/echo")
+async def giga_chad_c_3_a_10_b_bob_c_nh5_3_b_3_aeroplanes_b_rush_echo():
+    """A mysterious dead-end in the maze for the traveler."""
+    return {
+        "question": "The echoes fade here… no puzzle awaits.",
+        "information": "You've chased the sound far and wide, but the true path lies elsewhere. Perhaps retracing your steps or exploring a different branch will reveal it.",
+    }
+
+
+# /b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/c
+
+
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/c")
+async def giga_chad_c_3_a_10_b_bob_c_nh5_3_b_3_aeroplanes_c():
+    """A mathematical reasoning room where the traveler must deduce age differences from ratios."""
+    return {
+        "question": "Recently, I attended the twelfth wedding anniversary celebration of my friends Mohini and Jayant. During the event, Jayant smiled and said, “When we got married, Mohini was three-fourths of my age. Now, after 12 years, she is five-sixths of my age.” Hearing this, everyone became curious to know their ages at the time of their marriage. Based on this information, what was the age difference between them?",
+        "information": "Focus on the ratios and the time elapsed to calculate the age difference at the time of marriage.",
+    }
+
+
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/c/6")
+async def giga_chad_c_3_a_10_b_bob_c_nh5_3_b_3_aeroplanes_c_6():
+    """A sports trivia room where the traveler must recall cricket records."""
+    return {
+        "question": "How many times do we get 'real' paneer in the mess?",
+        "information": "It is a number",
+        "hint": "Think of all the erasers that were sacrificed for the great cause...",
+    }
+
+
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/c/6/0")
+async def giga_chad_c_3_a_10_b_bob_c_nh5_3_b_3_aeroplanes_c_6_srh_dead_end():
+    """A dead-end chamber where the wanderer has reached a stop, but a mysterious path may lie elsewhere."""
+    return {
+        "information": "Ah, brave traveler! You've arrived at a cul-de-sac. The path forward here fades into shadows. Perhaps another route hides the key to continue your adventure.",
+        "hint": "Retrace your steps to the last branching node and explore a different path.",
+    }
+
+
+# /b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/a/oss/6/b
+
+
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/a/oss/6/b")
+async def giga_chad_c_3_a_10_b_bob_c_nh5_3_b_3_aeroplanes_a_oss_6_b():
+    """A cinematic trivia room where the traveler must guess the unofficial label of an upcoming film project."""
+    return {
+        "question": "S. S. Rajamouli and Mahesh Babu's upcoming project has yet to reveal its title, but discussions in the film circle revolve around a single unofficial label inspired by global exploration. What is that word?",
+        "information": "Think of a term linked to exploration and adventures around the world.",
+        "hint": "It's a single word often associated with discovering new places.",
+    }
+
+
+@app.get(
+    "/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/a/oss/6/b/globetrotter"
+)
+async def giga_chad_c_3_a_10_b_bob_c_nh5_3_b_3_aeroplanes_a_oss_6_b_globetrotter():
+    """A computing history room where the traveler must identify an OS created by a student in 1991."""
+    return {
+        "question": "Which operating system's first version was created by a 21-year-old student in 1991 and had just 10,239 lines of code?",
+        "information": "This OS is now one of the most widely used open-source systems in the world.",
+        "hint": "Its mascot is a penguin.",
+    }
+
+
+@app.get(
+    "/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/a/oss/6/b/globetrotter/linux"
+)
+async def giga_chad_c_3_a_10_b_bob_c_nh5_3_b_3_aeroplanes_a_oss_6_b_globetrotter_linux_deadend():
+    """A dead-end in the tech maze — the traveler has reached the end of this path."""
+    return {
+        "information": "Ah, you've ventured far and discovered the legendary OS, but this path has nothing more to offer! Perhaps another route will unveil secrets yet unknown.",
+        "hint": "Retrace your steps to the last branching point to explore a different path.",
+    }
+
+
+# /b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/a/oss/6/c
+
+
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/a/oss/6/c")
+async def giga_chad_c_3_a_10_b_bob_c_nh5_3_b_3_aeroplanes_a_oss_6_c():
+    """A Python functional programming challenge room."""
+    return {
+        "question": "What Python built-in function is used to transform elements of an iterable into a new iterable by applying a given function to each element? (just write the function name)",
+        "information": "Think of a function that ‘maps' one thing to another across a sequence.",
+        "hint": "It's a one-word function often used in combination with lambda functions.",
+    }
+
+
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/a/oss/6/c/map")
+async def giga_chad_c_3_a_10_b_bob_c_nh5_3_b_3_aeroplanes_a_oss_6_c_map():
+    """A historical computing trivia room."""
+    return {
+        "question": "The world's first computer password was created in 1961 for a system at MIT. That system was one of the earliest time-sharing computers ever built. What was its name? (short form only)",
+        "information": "Think of early computing at MIT — an iconic time-sharing system.",
+        "hint": "Just four letters.",
+    }
+
+
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/a/oss/6/c/map/ctss")
+async def giga_chad_c_3_a_10_b_bob_c_nh5_3_b_3_aeroplanes_a_oss_6_c_map_ctss_deadend():
+    """A mysterious dead-end for the wanderer."""
+    return {
+        "information": "Ah, traveler… you've reached a silent chamber where no new riddles await. Perhaps a different path holds the secrets you seek. Tread wisely and retrace your steps.",
+        "hint": "Go back to the last branching node; a new journey awaits there.",
+    }
