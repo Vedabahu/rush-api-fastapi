@@ -1,9 +1,10 @@
+from random import choice
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, JSONResponse
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
-from src.middleware import RequestLoggingMiddleware
+from src.middleware import RequestLoggingMiddleware, BlockOn404Middleware
 
 KEY = "36e56929863eb09971a059416f0d68a10f1264bc3abda51fb50f3fc4ab7e35302b894fa97b7fe9818031cacbd601d72ff9634c0a16d3a1862724844833880b16"
 
@@ -19,15 +20,48 @@ app.add_middleware(
     allow_headers=["*"],  # Allow all headers
 )
 app.add_middleware(RequestLoggingMiddleware)
+app.add_middleware(BlockOn404Middleware)
+
+
+died_404_messages = [
+    {
+        "message": "You tried to tickle the balls of a tiger... You died. Now wait 10s before you can continue."
+    },
+    {
+        "message": "You talked in Hindi to a Bangalore auto rikshaw person. He was not ammused. You died. Now wait 10s before you can continue."
+    },
+    {
+        "message": "You are waiting for Michael Jackson... on the world trade center on 9/11... You died. Now wait 10s before you can continue."
+    },
+    {
+        "message": "You ate the paneer from the mess... Turns out, it was not paneer... You died. Now wait 10s before you can continue."
+    },
+    {
+        "message": "You ate the jeera rice from the mess. You got a protein overdose. You died. Now wait 10s before you can continue."
+    },
+    {
+        "message": "You applied for Shrek live action role but you got rejected because you were too ugly... You died from emotional damage. Now wait 10s before you can continue."
+    },
+    {
+        "message": "You tried to race Lightning McQueen... You got hit by Chick Hicks and died. Now wait 10s before you can continue."
+    },
+    {
+        "message": "You got bitten by a dog because you were eating Croissant... You died. Now wait 10s before you can continue."
+    },
+    {
+        "message": "You got blown up by a creeper... You died. Now wait 10s before you can continue."
+    },
+    {
+        "message": "A snake bit you, you bit it back... both of you died. Now wait 10s before you can continue."
+    },
+]
 
 
 @app.exception_handler(StarletteHTTPException)
 async def custom_http_exception_handler(request: Request, exc: StarletteHTTPException):
     if exc.status_code == 404:
         # Return the image on 404
-        return FileResponse(
-            "images/404_not_found.png", media_type="image/png", status_code=404
-        )
+        return JSONResponse(choice(died_404_messages), status_code=404)
     return exc
 
 
@@ -1018,7 +1052,7 @@ async def unlock_treasure(request: Request):
         return {
             "message": "The key fits perfectly! 🔑 The chest creaks open... and inside you find something truly legendary.",
             "treasure": "/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/a/oss/6/a/vedabahu/63/time/linus-vp-the-brave.webm",
-            "information": "Behold! You’ve unlocked the ultimate treasure - get ready, this is going to be *epic*! 🎉",
+            "information": "Behold! You've unlocked the ultimate treasure - get ready, this is going to be *epic*! 🎉",
         }
     else:
         return {

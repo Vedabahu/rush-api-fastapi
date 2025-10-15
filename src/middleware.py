@@ -2,6 +2,7 @@ import logging
 import time
 from datetime import datetime, timezone
 from fastapi import Request
+from fastapi.responses import JSONResponse
 from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.types import ASGIApp
 
@@ -62,5 +63,37 @@ class RequestLoggingMiddleware(BaseHTTPMiddleware):
 
         # Log the message
         self.logger.info(log_message)
+
+        return response
+
+
+# Store IP → block_until timestamp
+blocked_ips = {}
+DELAY_SECONDS = 10  # Example delay
+
+
+class BlockOn404Middleware(BaseHTTPMiddleware):
+    async def dispatch(self, request: Request, call_next):
+        client_ip = request.client.host
+
+        # Check if IP is currently blocked
+        blocked_until = blocked_ips.get(client_ip)
+        if blocked_until:
+            if time.time() < blocked_until:
+                remaining = int(blocked_until - time.time())
+                return JSONResponse(
+                    {
+                        "error": f"You have visited a wrong node. Wait for {remaining} seconds before proceeding."
+                    },
+                    status_code=403,
+                )
+            else:
+                # Block expired, remove entry
+                blocked_ips.pop(client_ip, None)
+
+        response = await call_next(request)
+        # If response is 404, add IP to blocked list
+        if response.status_code == 404:
+            blocked_ips[client_ip] = time.time() + DELAY_SECONDS
 
         return response
