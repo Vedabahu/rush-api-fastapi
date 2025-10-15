@@ -1,3 +1,5 @@
+from datetime import datetime, timezone
+import logging
 from random import choice
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
@@ -1040,6 +1042,27 @@ async def goal_room():
     }
 
 
+# Define a separate logger for winners
+winner_logger = logging.getLogger("winner_logger")
+winner_logger.setLevel(logging.INFO)
+
+# Avoid duplicate handlers
+if not winner_logger.handlers:
+    formatter = logging.Formatter("%(message)s")
+
+    # File handler
+    file_handler = logging.FileHandler("winners.log")
+    file_handler.setFormatter(formatter)
+    winner_logger.addHandler(file_handler)
+
+    # Stream handler (stdout)
+    stream_handler = logging.StreamHandler()
+    stream_handler.setFormatter(formatter)
+    winner_logger.addHandler(stream_handler)
+
+    winner_logger.propagate = False
+
+
 @app.post(
     "/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/a/oss/6/a/vedabahu/63/time"
 )
@@ -1048,13 +1071,26 @@ async def unlock_treasure(request: Request):
     data = await request.json()
     key = data.get("key")
 
+    client_ip = request.client.host if request.client else "unknown"
+    client_port = request.client.port if request.client else "unknown"
+    team_name = request.headers.get("team_name", "NO_TEAM_NAME")
+    timestamp = datetime.now(timezone.utc).isoformat()
+
     if key == KEY:
+        winner_logger.info(
+            f"WINNER : {client_ip}:{client_port} : {team_name} : {timestamp} : 200"
+        )
+
         return {
             "message": "The key fits perfectly! 🔑 The chest creaks open... and inside you find something truly legendary.",
             "treasure": "/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/a/oss/6/a/vedabahu/63/time/linus-vp-the-brave.webm",
             "information": "Behold! You've unlocked the ultimate treasure - get ready, this is going to be *epic*! 🎉",
         }
     else:
+        winner_logger.info(
+            f"FAILED_ATTEMPT : {client_ip}:{client_port} : {team_name} : {timestamp} : 200"
+        )
+
         return {
             "message": "The key rattles in the lock but doesn't turn. ❌",
             "information": "Looks like this isn't the right key... maybe try another one, adventurer.",
