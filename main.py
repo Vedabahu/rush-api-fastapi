@@ -565,7 +565,7 @@ async def clefairy_deadend():
 
 ############ LEFT BRANCH ################
 
-### b/12/giga-chad/c/3 gate:
+######### b/12/giga-chad/c/3 gate:
 
 # b/12/giga-chad/c/3/b path:
 @app.get("/b/12/giga-chad/c/3/b")
@@ -606,9 +606,7 @@ async def giga_chad_c_3_b_8_transformer():
         )
     }
 
-
-
-# ########################b/12/giga-chad/c/3/c path:
+# b/12/giga-chad/c/3/c path:
 
 @app.get("/b/12/giga-chad/c/3/c")
 async def giga_chad_c_3_c():
@@ -646,8 +644,9 @@ async def giga_chad_c_3_c_dune_5():
         "information": "Perhaps a different trail holds the treasure you seek. The echoes hint of routes unseen — retrace, rethink, rediscover."
     }
 
-#branch
-#/b/12/giga-chad/c/3/a/10/b/bob/a
+
+# /b/12/giga-chad/c/3/a/10/b/bob/a path
+
 @app.get("/b/12/giga-chad/c/3/a/10/b/bob/a")
 async def giga_chad_c_3_a_10_b_bob_a():
     """A nostalgic tech trivia buried in time."""
@@ -687,7 +686,7 @@ async def giga_chad_c_3_a_10_b_bob_a_microsoft_14_lo():
     }
 
 
-######/b/12/giga-chad/c/3/a/10/b/bob/b
+# /b/12/giga-chad/c/3/a/10/b/bob/b path
 
 @app.get("/b/12/giga-chad/c/3/a/10/b/bob/b")
 async def giga_chad_c_3_a_10_b_bob_b():
@@ -727,8 +726,7 @@ async def giga_chad_c_3_a_10_b_bob_b_symmetric_moth_11():
         "information": "The path forward hides elsewhere. Retrace your steps and explore another trail — the real challenge lies beyond this turn."
     }
 
-#####BRANCH 19 -23
-#/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/a
+# /b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/a path
 @app.get("/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/a")
 async def giga_chad_c_3_a_10_b_bob_c_nh5_3_a():
     """A computer storage challenge where the traveler must identify the type of memory."""
@@ -753,6 +751,7 @@ async def giga_chad_c_3_a_10_b_bob_c_nh5_3_a_flash_rithwik():
         "information": "You're so close! But the true challenge lies along another trail — perhaps retracing your steps will reveal it."
     }
 
+# /b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/c path
 
 @app.get("/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/c")
 async def giga_chad_c_3_a_10_b_bob_c_nh5_3_c():
@@ -778,7 +777,7 @@ async def giga_chad_c_3_a_10_b_bob_c_nh5_3_c_functional_south():
         "information": "You're treading carefully and wisely, but the true challenge lies elsewhere. Perhaps retracing your steps or exploring a different route will reveal it."
     }
 
-#/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes
+#/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/b
 
 @app.get("/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/b")
 async def giga_chad_c_3_a_10_b_bob_c_nh5_3_b_3_aeroplanes_b():
