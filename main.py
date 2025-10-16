@@ -1006,6 +1006,7 @@ async def giga_chad_complex_node():
         "information": "A puzzling arrangement appears before you, hinting at numbers and characters.",
         "question": "Answer is the ASCII value of the result?",
         "image": "/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/a/oss/6/a/vedabahu/image",
+        "hint": "Imagine entering the ASCII value of a number 😂"
     }
 
 
