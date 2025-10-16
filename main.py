@@ -1124,12 +1124,12 @@ async def giga_chad_c_3_b():
     """A visual puzzle where the traveler must identify the missing number on a credit card."""
     return {
         "question": "Which number is missing on the bottom credit card?",
-        "image": "/images/credictcard.png",
+        "image": "/b/12/giga-chad/c/3/b/credictcard.png",
         "information": "Look closely at the image — a single digit is missing on the bottom card. Can you spot it?",
     }
 
 
-@app.get("/images/credictcard.png")
+@app.get("/b/12/giga-chad/c/3/b/credictcard.png")
 async def get_credictcard_image():
     """Serves the credit card puzzle image."""
     return FileResponse("./images/credictcard.png")
@@ -1169,12 +1169,12 @@ async def giga_chad_c_3_c():
     """A cinematic puzzle for the curious wanderer."""
     return {
         "question": "Guess the movie from the image.",
-        "image": "/images/realmovie.png",
+        "image": "/b/12/giga-chad/c/3/c/realmovie.png",
         "information": "As you wish — every frame hides a story, and every story hides a clue.",
     }
 
 
-@app.get("/images/realmovie.png")
+@app.get("/b/12/giga-chad/c/3/c/realmovie.png")
 async def get_realmovie_image():
     """Serves the movie guessing image."""
     return FileResponse("./images/realmovie.png")
@@ -1185,12 +1185,12 @@ async def q67():
     """A debugging challenge hidden in code."""
     return {
         "question": "This code tries to create a dictionary from two lists but fails. Find the line with the error.",
-        "image": "/images/real_code.png",
+        "image": "/b/12/giga-chad/c/3/c/dune/real_code.png",
         "information": "Look closely — sometimes the smallest mismatch between lists can cause the biggest errors.",
     }
 
 
-@app.get("/images/real_code.png")
+@app.get("/b/12/giga-chad/c/3/c/dune/real_code.png")
 async def get_real_code_image():
     """Serves the debugging challenge image."""
     return FileResponse("./images/real_code.png")
@@ -1222,12 +1222,12 @@ async def giga_chad_c_3_a_10_b_bob_a_microsoft():
     """A debugging challenge awaits the wanderer."""
     return {
         "question": "Which line has error?",
-        "image": "/images/real_code2.png",
+        "image": "/b/12/giga-chad/c/3/a/10/b/bob/a/microsoft/real_code2.png",
         "information": "The error hides in plain sight — a small slip in logic or syntax.",
     }
 
 
-@app.get("/images/real_code2.png")
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/a/microsoft/real_code2.png")
 async def get_real_code2_image():
     """Serves the debugging challenge image."""
     return FileResponse("./images/real_code2.png")
@@ -1277,12 +1277,12 @@ async def giga_chad_c_3_a_10_b_bob_b_symmetric_moth():
     """A debugging challenge where the traveler must identify the error in the code."""
     return {
         "question": "Which line has error?",
-        "image": "/images/real_code3.png",
+        "image": "/b/12/giga-chad/c/3/a/10/b/bob/b/symmetric/moth/real_code3.png",
         "information": "The bug lurks in the lines — observe carefully and spot the culprit.",
     }
 
 
-@app.get("/images/real_code3.png")
+@app.get("/b/12/giga-chad/c/3/a/10/b/bob/b/symmetric/moth/real_code3.png")
 async def get_real_code3_image():
     """Serves the debugging challenge image."""
     return FileResponse("./images/real_code3.png")
