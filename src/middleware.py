@@ -39,6 +39,7 @@ class RequestLoggingMiddleware(BaseHTTPMiddleware):
         # Get client IP and port
         client_ip = request.client.host if request.client else "unknown"
         client_port = request.client.port if request.client else "unknown"
+        client_path = request.url.path if request.url else "unknown"
 
         # Get the 'team_name' header value directly
         team_name = request.headers.get("team_name", "NO_TEAM_NAME")
@@ -59,7 +60,7 @@ class RequestLoggingMiddleware(BaseHTTPMiddleware):
         status_code = response.status_code
 
         # Format the log message
-        log_message = f"{request_type} : {client_ip}:{client_port} : {team_name} : {timestamp} : {status_code}"
+        log_message = f"{request_type} {client_path} : {client_ip}:{client_port} : {team_name} : {timestamp} : {status_code}"
 
         # Log the message
         self.logger.info(log_message)
