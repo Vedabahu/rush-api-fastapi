@@ -925,7 +925,7 @@ async def adjacent_circle():
 async def cages_and_rockets():
     return {
         "question": "If 'cages' are called 'rockets', 'rockets' are called 'traps', 'traps' are called 'planets', \n 'planets' are called 'aeroplanes', 'aeroplanes' are called 'cycles' and cycles' are called \n 'cars', what is Earth",
-        "options": ["a: Cycles", "b: Rockets", "c: Planet", "d: Aeroplanes", "e: Cars"],
+        "options": ["cycles", "rockets", "planet", "aeroplanes", "cars"],
     }
 
 
