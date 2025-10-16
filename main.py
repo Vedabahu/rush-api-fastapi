@@ -135,6 +135,7 @@ async def question_13():
         "information": "The question is hidden within the image itself. Examine every detail - nothing is as it seems.",
         "image": "/b/12/ernest-khalimov/13.png",
         "hint": "Focus closely; the answer lies within the picture.",
+        "note": "Enter the option, like a, b, c or d and not the value.",
     }
 
 
