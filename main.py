@@ -776,6 +776,12 @@ async def question_giga_chad_7():
     return {
         "question": "Solve the question in the image.",
         "image_url": "/b/12/giga-chad/c/7.png",
+        "options": [
+            {"1": "Brother's wife's father's father"},
+            {"2": "Brother's wife's father's brother"},
+            {"3": "Brother's wife's father's mother"},
+            {"4": "Brother's wife's mother's brother"},
+        ],
     }
 
 
