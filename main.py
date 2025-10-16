@@ -683,7 +683,7 @@ async def batman_b_geometry_puzzle():
     }
 
 
-@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/b/8")
+@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/b/7")
 async def batman_b_8_market_riddle():
     """A classic riddle room where logic matters more than math — count carefully who's actually traveling!"""
     return {
@@ -692,7 +692,7 @@ async def batman_b_8_market_riddle():
     }
 
 
-@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/b/8/1")
+@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/b/7/1")
 async def batman_b_8_1_dead_end():
     """A mysterious dead-end room where the traveler reaches a silent void."""
     return {
