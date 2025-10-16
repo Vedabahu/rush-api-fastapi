@@ -1046,7 +1046,7 @@ async def goal_room():
         "message": "You found a shiny treasure chest! ✨ But it seems to be locked tight... the keyhole glows faintly.",
         "information": "You feel a strange pull, as if the chest is waiting for something - or someone - to unlock it.",
         "hint": "Hmm... didn't /b/12 have another secret path?",
-        "note": 'Use a post request with { "key" : "the_actual_key" } as the data to unlock the chest.',
+        "note": "Use a post request with { 'key' : 'the_actual_key' } as the data to unlock the chest.",
     }
 
 
