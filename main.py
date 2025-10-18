@@ -6,7 +6,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
-from src.middleware import RequestLoggingMiddleware, BlockOn404Middleware
+from src.middleware import (
+    RequestLoggingMiddleware,
+    BlockOn404Middleware,
+    RequireTeamNameMiddleware,
+)
 
 KEY = "36e56929863eb09971a059416f0d68a10f1264bc3abda51fb50f3fc4ab7e35302b894fa97b7fe9818031cacbd601d72ff9634c0a16d3a1862724844833880b16"
 
@@ -23,7 +27,7 @@ app.add_middleware(
 )
 app.add_middleware(RequestLoggingMiddleware)
 app.add_middleware(BlockOn404Middleware)
-
+app.add_middleware(RequireTeamNameMiddleware)
 
 died_404_messages = [
     {
@@ -65,6 +69,11 @@ async def custom_http_exception_handler(request: Request, exc: StarletteHTTPExce
         # Return the image on 404
         return JSONResponse(choice(died_404_messages), status_code=404)
     return exc
+
+
+@app.get("/rules")
+async def give_rules():
+    return FileResponse("./rules_1.pdf")
 
 
 @app.get("/")
@@ -1006,7 +1015,7 @@ async def giga_chad_complex_node():
         "information": "A puzzling arrangement appears before you, hinting at numbers and characters.",
         "question": "Answer is the ASCII value of the result?",
         "image": "/b/12/giga-chad/c/3/a/10/b/bob/c/nh5+/3/b/3/aeroplanes/a/oss/6/a/vedabahu/image",
-        "hint": "Imagine entering the ASCII value of a number 😂"
+        "hint": "Imagine entering the ASCII value of a number 😂",
     }
 
 

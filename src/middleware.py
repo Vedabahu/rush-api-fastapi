@@ -98,3 +98,24 @@ class BlockOn404Middleware(BaseHTTPMiddleware):
             blocked_ips[client_ip] = time.time() + DELAY_SECONDS
 
         return response
+
+
+class RequireTeamNameMiddleware(BaseHTTPMiddleware):
+    def __init__(self, app: ASGIApp):
+        super().__init__(app)
+
+    async def dispatch(self, request: Request, call_next):
+        # Skip validation for /rules endpoint
+        if request.url.path == "/rules":
+            return await call_next(request)
+
+        # Check for 'team_name' header
+        team_name = request.headers.get("team_name")
+        if not team_name:
+            return JSONResponse(
+                {"error": "Missing required header: 'team_name'"},
+                status_code=403,
+            )
+
+        # Continue processing
+        return await call_next(request)
