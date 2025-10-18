@@ -14,8 +14,8 @@ from src.middleware import (
 
 KEY = "36e56929863eb09971a059416f0d68a10f1264bc3abda51fb50f3fc4ab7e35302b894fa97b7fe9818031cacbd601d72ff9634c0a16d3a1862724844833880b16"
 
-# app = FastAPI(docs_url="doc", redoc_url=None, openapi_url=None)
-app = FastAPI()
+app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
+# app = FastAPI()
 
 # CORS configuration: allow everything
 app.add_middleware(
