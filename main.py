@@ -73,7 +73,7 @@ async def custom_http_exception_handler(request: Request, exc: StarletteHTTPExce
 
 @app.get("/rules")
 async def give_rules():
-    return FileResponse("./rules_1.pdf")
+    return FileResponse("./rules_2.pdf")
 
 
 @app.get("/")
@@ -177,7 +177,7 @@ async def question_cultural_clubs():
     }
 
 
-@app.get("/b/12/ernest-khalimov/b/b/7")
+@app.get("/b/12/ernest-khalimov/b/b/9")
 async def question_wordle():
     """This maze question challenges the player to provide today's Wordle answer."""
     return {
@@ -188,23 +188,23 @@ async def question_wordle():
     }
 
 
-@app.get("/b/12/ernest-khalimov/b/b/7/haven")
+@app.get("/b/12/ernest-khalimov/b/b/9/haven")
 async def question_haven():
     """This maze question requires the player to inspect the image to find the hidden question."""
     return {
         "information": "The question is hidden within the image itself. Observe closely; every detail could be a clue.",
-        "image": "/b/12/ernest-khalimov/b/b/7/haven/35.png",
+        "image": "/b/12/ernest-khalimov/b/b/9/haven/35.png",
         "hint": "Sometimes the picture tells the whole story...",
     }
 
 
-@app.get("/b/12/ernest-khalimov/b/b/7/haven/35.png")
+@app.get("/b/12/ernest-khalimov/b/b/9/haven/35.png")
 async def get_haven_image():
     """Serves the image containing the hidden question for this maze node."""
     return FileResponse("./images/35.png")
 
 
-@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus")
+@app.get("/b/12/ernest-khalimov/b/b/9/haven/venus")
 async def haven_venus():
     """An empty chamber in the maze where the player faces a strange, adventurous riddle with three possible choices."""
     return {
@@ -218,7 +218,7 @@ async def haven_venus():
     }
 
 
-@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/c")
+@app.get("/b/12/ernest-khalimov/b/b/9/haven/venus/c")
 async def question_family_relation():
     """This maze question challenges the player to solve a family relation puzzle based on symbolic relationships."""
     return {
@@ -232,57 +232,57 @@ How is Q related to T from the expression "Q-P+R%T"?""",
     }
 
 
-@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/c/a")
+@app.get("/b/12/ernest-khalimov/b/b/9/haven/venus/c/a")
 async def question_solve_image():
     """This maze question requires the player to solve a specific problem shown in an image."""
     return {
         "information": "Solve the question labeled (ii) in the image carefully. Every detail might matter!",
-        "image": "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/8.png",
+        "image": "/b/12/ernest-khalimov/b/b/9/haven/venus/c/a/8.png",
         "hint": "Focus on the problem statement and calculations; the solution will guide your next step.",
     }
 
 
-@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/8.png")
+@app.get("/b/12/ernest-khalimov/b/b/9/haven/venus/c/a/8.png")
 async def get_question_image():
     """Serves the image containing the problem to be solved in this maze node."""
     return FileResponse("./images/8.png")
 
 
-@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40")
+@app.get("/b/12/ernest-khalimov/b/b/9/haven/venus/c/a/40")
 async def question_count_triangles():
     """This maze question asks the player to count the number of triangles in the provided image."""
     return {
         "question": "Count the number of triangles in the image.",
         "information": "Look carefully at each intersection and overlap — some triangles may be hidden within others.",
-        "image": "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/20.png",
+        "image": "/b/12/ernest-khalimov/b/b/9/haven/venus/c/a/40/20.png",
         "hint": "Patience and keen observation are key here!",
     }
 
 
-@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/20.png")
+@app.get("/b/12/ernest-khalimov/b/b/9/haven/venus/c/a/40/20.png")
 async def get_triangle_image():
     """Serves the image in which the player must count the number of triangles."""
     return FileResponse("./images/20.png")
 
 
-@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23")
+@app.get("/b/12/ernest-khalimov/b/b/9/haven/venus/c/a/40/23")
 async def question_chess_move():
     """This maze question requires the player to determine the best next move for black in a chess position."""
     return {
         "question": "Find the 1st/next best possible move for black (1 move only).",
         "information": "Use standard ASCII chess notation to indicate your move (e.g., e7e5). Analyze carefully!",
-        "image": "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/33.png",
+        "image": "/b/12/ernest-khalimov/b/b/9/haven/venus/c/a/40/23/33.png",
         "hint": "Think strategically — one precise move can change the game.",
     }
 
 
-@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/33.png")
+@app.get("/b/12/ernest-khalimov/b/b/9/haven/venus/c/a/40/23/33.png")
 async def get_chess_image():
     """Serves the chess board image for the player to determine the next move."""
     return FileResponse("./images/33.png")
 
 
-@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+")
+@app.get("/b/12/ernest-khalimov/b/b/9/haven/venus/c/a/40/23/re1+")
 async def question_decode_phrase():
     """This maze question challenges the player to decode a scrambled phrase and guess the character."""
     return {
@@ -291,7 +291,7 @@ async def question_decode_phrase():
     }
 
 
-@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman")
+@app.get("/b/12/ernest-khalimov/b/b/9/haven/venus/c/a/40/23/re1+/batman")
 async def batman_node():
     """A mysterious medieval chamber within the maze where the player must choose between three ancient paths."""
     return {
@@ -305,7 +305,7 @@ async def batman_node():
     }
 
 
-@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c")
+@app.get("/b/12/ernest-khalimov/b/b/9/haven/venus/c/a/40/23/re1+/batman/c")
 async def question_professor_schedule():
     """This maze question asks the player to identify which professor has a lecture in a specific room at a given time."""
     return {
@@ -316,7 +316,7 @@ async def question_professor_schedule():
 
 
 @app.get(
-    "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar"
+    "/b/12/ernest-khalimov/b/b/9/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar"
 )
 async def question_decipher_numbers():
     """This maze question challenges the player to decode a sequence of numbers into a meaningful message."""
@@ -329,18 +329,18 @@ async def question_decipher_numbers():
 
 
 @app.get(
-    "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris"
+    "/b/12/ernest-khalimov/b/b/9/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris"
 )
 async def question_paris_image():
     """This maze question requires the player to inspect the image to find the hidden question."""
     return {
         "information": "The question is hidden within the image itself. Examine carefully — every detail could be a clue.",
-        "image": "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/29.png",
+        "image": "/b/12/ernest-khalimov/b/b/9/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/29.png",
     }
 
 
 @app.get(
-    "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/29.png"
+    "/b/12/ernest-khalimov/b/b/9/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/29.png"
 )
 async def get_paris_image():
     """Serves the image containing the hidden question for this maze node."""
@@ -348,7 +348,7 @@ async def get_paris_image():
 
 
 @app.get(
-    "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/bdnplnac"
+    "/b/12/ernest-khalimov/b/b/9/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/bdnplnac"
 )
 async def paris_bdnplnac():
     """A silent crossroads deep within the maze where two mysterious choices await the player."""
@@ -363,7 +363,7 @@ async def paris_bdnplnac():
 
 
 @app.get(
-    "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/bdnplnac/a"
+    "/b/12/ernest-khalimov/b/b/9/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/bdnplnac/a"
 )
 async def question_pi_block_clocks():
     """This maze question asks the player to determine the number of clocks at the entrance of PI block in the college."""
@@ -375,7 +375,7 @@ async def question_pi_block_clocks():
 
 
 @app.get(
-    "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/bdnplnac/a/4"
+    "/b/12/ernest-khalimov/b/b/9/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/bdnplnac/a/4"
 )
 async def question_light_first():
     """This maze question challenges the player with a classic riddle about lighting objects in a room."""
@@ -386,7 +386,7 @@ async def question_light_first():
 
 
 @app.get(
-    "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/bdnplnac/a/4/match"
+    "/b/12/ernest-khalimov/b/b/9/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/bdnplnac/a/4/match"
 )
 async def question_best_club():
     """This maze question playfully asks the player to name the best club in IIIT Dharwad."""
@@ -398,7 +398,7 @@ async def question_best_club():
 
 # Key Node
 @app.get(
-    "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/bdnplnac/a/4/match/techniosys"
+    "/b/12/ernest-khalimov/b/b/9/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/bdnplnac/a/4/match/techniosys"
 )
 async def key_room():
     """This endpoint represents a secret room deep within the maze where the player discovers a suspicious key."""
@@ -494,7 +494,7 @@ async def ernest_khalimov_b_a_c_a_b_a_dead_end():
 # "b/12/ernest-khalimov/b/b/7/haven/venus/a" path
 
 
-@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/a")
+@app.get("/b/12/ernest-khalimov/b/b/9/haven/venus/a")
 async def venus_a_puzzle():
     """A mysterious riddle room where players must decipher the scrambled message."""
     return {
@@ -503,7 +503,7 @@ async def venus_a_puzzle():
     }
 
 
-@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/a/26")
+@app.get("/b/12/ernest-khalimov/b/b/9/haven/venus/a/26")
 async def venus_a26_temperature_riddle():
     """A brain-teaser chamber: players must find the temperature that reads the same in °C and °F."""
     return {
@@ -513,7 +513,7 @@ async def venus_a26_temperature_riddle():
     }
 
 
-@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/a/26/-40")
+@app.get("/b/12/ernest-khalimov/b/b/9/haven/venus/a/26/-40")
 async def venus_a26_minus40_riddle():
     """A puzzling room where logic meets arithmetic — solve the riddle of ages to proceed."""
     return {
@@ -522,7 +522,7 @@ async def venus_a26_minus40_riddle():
     }
 
 
-@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/a/26/-40/75")
+@app.get("/b/12/ernest-khalimov/b/b/9/haven/venus/a/26/-40/75")
 async def venus_a26_minus40_75_riddle():
     """A tricky puzzle chamber that tests your sense of logic and sequence — not just math!"""
     return {
@@ -532,7 +532,7 @@ async def venus_a26_minus40_75_riddle():
     }
 
 
-@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/a/26/-40/75/11")
+@app.get("/b/12/ernest-khalimov/b/b/9/haven/venus/a/26/-40/75/11")
 async def venus_a26_minus40_75_11_dead_end():
     """A dead-end chamber where the traveler realizes this path leads nowhere... for now."""
     return {
@@ -544,7 +544,7 @@ async def venus_a26_minus40_75_11_dead_end():
 # "b/12/ernest-khalimov/b/b/7/haven/venus/b" path
 
 
-@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/b")
+@app.get("/b/12/ernest-khalimov/b/b/9/haven/venus/b")
 async def venus_b_room():
     """A historical challenge room where the traveler must identify the main person in the image."""
     return {
@@ -561,7 +561,7 @@ async def get_theroom_image():
     return FileResponse("./images/theroom.jpg")
 
 
-@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/b/anne-frank")
+@app.get("/b/12/ernest-khalimov/b/b/9/haven/venus/b/anne-frank")
 async def venus_b_annefrank_object():
     """A historical-technical challenge room where the traveler must identify the object shown in the image."""
     return {
@@ -577,7 +577,7 @@ async def get_object_image():
     return FileResponse("./images/object.jpg")
 
 
-@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/b/anne-frank/b2")
+@app.get("/b/12/ernest-khalimov/b/b/9/haven/venus/b/anne-frank/b2")
 async def venus_b_annefrank_b2_chess():
     """A chess challenge room where the traveler must find the best move for white and provide the answer in lowercase chess notation."""
     return {
@@ -593,7 +593,7 @@ async def get_chessfr_image():
     return FileResponse("./images/chessfr.png")
 
 
-@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/b/anne-frank/b2/bxg6+")
+@app.get("/b/12/ernest-khalimov/b/b/9/haven/venus/b/anne-frank/b2/bxg6+")
 async def venus_b_annefrank_b2_movie():
     """A fun emoji challenge room where the traveler must guess the movie from the emojis."""
     return {
@@ -610,7 +610,7 @@ async def get_movieguessr_image():
     return FileResponse("./images/movieguessr.png")
 
 
-@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/b/anne-frank/b2/bxg6+/rrr")
+@app.get("/b/12/ernest-khalimov/b/b/9/haven/venus/b/anne-frank/b2/bxg6+/rrr")
 async def venus_b_annefrank_b2_rrr_dead_end():
     """A shadowy chamber where the path abruptly ends, leaving the traveler to ponder the unknown."""
     return {
@@ -628,7 +628,7 @@ async def venus_b_annefrank_b2_rrr_dead_end():
 # b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/a path:
 
 
-@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/a")
+@app.get("/b/12/ernest-khalimov/b/b/9/haven/venus/c/a/40/23/re1+/batman/a")
 async def batman_a_numbers():
     """A mathematical challenge room where the traveler must find the sum of two mysterious numbers."""
     return {
@@ -638,26 +638,26 @@ async def batman_a_numbers():
     }
 
 
-@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/a/17")
+@app.get("/b/12/ernest-khalimov/b/b/9/haven/venus/c/a/40/23/re1+/batman/a/17")
 async def pokemon_batman_a17():
     """A playful challenge room — identify the Pokémon shown in the image to proceed."""
     return {
         "question": "Guess the Pokémon shown in the image.",
-        "image": "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/a/17/pokemon.png",
+        "image": "/b/12/ernest-khalimov/b/b/9/haven/venus/c/a/40/23/re1+/batman/a/17/pokemon.png",
         "information": "A shimmering silhouette stares back at you — trust your instincts and name the creature.",
         "hint": "It's a Psychic type — think mind-benders and telekinetic trickery.",
     }
 
 
 @app.get(
-    "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/a/17/pokemon.png"
+    "/b/12/ernest-khalimov/b/b/9/haven/venus/c/a/40/23/re1+/batman/a/17/pokemon.png"
 )
 async def get_pokemon_image_a17():
     """Serves the Pokémon image for the guess-the-Pokémon challenge."""
     return FileResponse("./images/pokemon.png")
 
 
-@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/a/17/azelf")
+@app.get("/b/12/ernest-khalimov/b/b/9/haven/venus/c/a/40/23/re1+/batman/a/17/azelf")
 async def batman_a_azelf_shopping():
     """A price puzzle room where the traveler must determine the cost of a shirt given a tricky shopping scenario."""
     return {
@@ -667,7 +667,7 @@ async def batman_a_azelf_shopping():
     }
 
 
-@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/a/17/azelf/105")
+@app.get("/b/12/ernest-khalimov/b/b/9/haven/venus/c/a/40/23/re1+/batman/a/17/azelf/105")
 async def batman_a_azelf_105_dead_end():
     """A dead-end chamber where the traveler reaches the end of this path, with no further questions."""
     return {
@@ -683,7 +683,7 @@ async def batman_a_azelf_105_dead_end():
 # b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/b path:
 
 
-@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/b")
+@app.get("/b/12/ernest-khalimov/b/b/9/haven/venus/c/a/40/23/re1+/batman/b")
 async def batman_b_geometry_puzzle():
     """A geometric riddle room where the traveler must determine the fewest lines to form given shapes."""
     return {
@@ -692,7 +692,7 @@ async def batman_b_geometry_puzzle():
     }
 
 
-@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/b/7")
+@app.get("/b/12/ernest-khalimov/b/b/9/haven/venus/c/a/40/23/re1+/batman/b/7")
 async def batman_b_8_market_riddle():
     """A classic riddle room where logic matters more than math — count carefully who's actually traveling!"""
     return {
@@ -701,7 +701,7 @@ async def batman_b_8_market_riddle():
     }
 
 
-@app.get("/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/b/7/1")
+@app.get("/b/12/ernest-khalimov/b/b/9/haven/venus/c/a/40/23/re1+/batman/b/7/1")
 async def batman_b_8_1_dead_end():
     """A mysterious dead-end room where the traveler reaches a silent void."""
     return {
@@ -716,7 +716,7 @@ async def batman_b_8_1_dead_end():
 
 
 @app.get(
-    "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/bdnplnac/b"
+    "/b/12/ernest-khalimov/b/b/9/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/bdnplnac/b"
 )
 async def batman_c_paris_bdnplnac_b():
     """A coded puzzle hidden behind symbols and logic."""
@@ -734,7 +734,7 @@ async def get_morse_question_image():
 
 
 @app.get(
-    "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/bdnplnac/b/30"
+    "/b/12/ernest-khalimov/b/b/9/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/bdnplnac/b/30"
 )
 async def guess_the_pokemon():
     """Guess the Pokémon from the shadow or silhouette."""
@@ -752,7 +752,7 @@ async def get_pokemon_image():
 
 
 @app.get(
-    "/b/12/ernest-khalimov/b/b/7/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/bdnplnac/b/30/clefairy"
+    "/b/12/ernest-khalimov/b/b/9/haven/venus/c/a/40/23/re1+/batman/c/dr-prakash-pawar/paris/bdnplnac/b/30/clefairy"
 )
 async def clefairy_deadend():
     """A mysterious dead end that teases the wanderer about another path."""
